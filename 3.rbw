@@ -1,23 +1,16 @@
 def  getdig(a)
-  
-   k=a
-  
-  
-   a.times { |i|
+  k=a 
+  maxfact  = 0
+  a.times { |i|
     if i==0  : next   end   
-    
-     puts i
-    
-    if (k%i)==0  and (k>i) : 
-      puts i
-      k = k/i
-    end   
-  
-  
+    if (k%i)==0  
+       maxfact = i
+       k = k/i
+       if (  i> k ) : break  end 
+    end 
   }
-
+  return maxfact
 end
-
 
 puts getdig(600851475143).to_s
 
