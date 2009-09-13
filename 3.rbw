@@ -1,15 +1,27 @@
 def  getdig(a)
-      a.times do |i|  
-       if (i==0)  or (i==1)  : next end
-       if (a%i)==0
-          puts i
-          k = (a/i)
-          if (k !=0) : getdig(k); end
-         else
-           i = i+1
-        end     
-      end  
+  
+   k=a
+  
+  
+   a.times { |i|
+    if i==0  : next   end   
+    
+     puts i
+    
+    if (k%i)==0  and (k>i) : 
+      puts i
+      k = k/i
+    end   
+  
+  
+  }
+
 end
 
 
-puts getdig(13195).to_s
+puts getdig(600851475143).to_s
+
+
+# The prime factors of 13195 are 5, 7, 13 and 29.
+# What is the largest prime factor of the number 600851475143 ?
+
