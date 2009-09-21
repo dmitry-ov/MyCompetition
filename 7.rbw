@@ -3,16 +3,19 @@ def prime(num)
     k = 1 # номер простого числа, начинаем с 1 
     array = [2]  # в массив будем собирать найденные простые числа
    loop  do 
-        prime =true  
+        prime = true  
         i = i+2 # увеличим   
         # выясним простое ли число попалось нам
          array.each { |d| if (i%d)==0 : prime = false ;  break ;  end  } 
          # если число было простым присвоим ему номер и покажем, занесем в массив простых чисел
          if (prime==true) 
-         k = k+1
-         array.push(i)
-         puts k.to_s + " --> "  + i.to_s 
-           if (k == num) : puts k ;  puts  i ; break;  end  
+           k = k+1
+           array.push(i)
+           # puts k.to_s + " --> "  + i.to_s 
+           if (k == num) :
+             puts k.to_s + " --> "  + i.to_s
+             break  
+           end  
         else 
             next 
         end   # if
