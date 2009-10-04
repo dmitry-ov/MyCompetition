@@ -7,5 +7,4 @@ def  sum(b)
 end
 
 
-
 puts sum(1000)
